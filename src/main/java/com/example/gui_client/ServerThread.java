@@ -41,9 +41,9 @@ public class ServerThread extends Thread {
                         String[] postfixArr = postfix.split(" ", 2);
                         receiver.receiveWhisper(postfixArr[0], postfixArr[1]);
                     }
-                    case "LN" -> receiver.receiveLoginBroadcast (postfix);
-                    case "LT" -> receiver. receiveLogoutBroadcast (postfix);
-                    case "ON" -> receiver. receiveOnline (postfix.split (" "));
+                    case "LN" -> receiver.receiveLoginBroadcast(postfix);
+                    case "LT" -> receiver.receiveLogoutBroadcast(postfix);
+                    case "ON" -> receiver.receiveOnline(postfix.split (" "));
                 }
             }
         } catch (IOException e) {
